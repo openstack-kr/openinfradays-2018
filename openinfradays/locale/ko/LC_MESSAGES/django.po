@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 12:57+0900\n"
+"POT-Creation-Date: 2018-05-16 04:24+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,55 +26,77 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: openinfradays/templates/index.html:11 openinfradays/templates/index.html:14
-#: openinfradays/templates/index.html:15 openinfradays/templates/index.html:18
+#: openinfradays/templates/base.html:11 openinfradays/templates/base.html:14
+#: openinfradays/templates/base.html:15
 msgid "OpenInfraDays Korea 2018"
 msgstr ""
 
-#: openinfradays/templates/index.html:69
+#: openinfradays/templates/base.html:18
+msgid "OpenInfraDays Koresa 2018"
+msgstr ""
+
+#: openinfradays/templates/base.html:68
 msgid "Home"
 msgstr "행사 소개"
 
-#: openinfradays/templates/index.html:70
+#: openinfradays/templates/base.html:70
 msgid "Program"
 msgstr "프로그램"
 
-#: openinfradays/templates/index.html:71
-msgid "venue"
-msgstr "장소"
+#: openinfradays/templates/base.html:74
+#: openinfradays/templates/schedule.html:11
+msgid "Schedule"
+msgstr "시간표"
 
-#: openinfradays/templates/index.html:72
-msgid "Registrate"
-msgstr "등록하기"
+#: openinfradays/templates/base.html:75 openinfradays/templates/program.html:11
+msgid "Programs"
+msgstr "프로그램 목록"
 
-#: openinfradays/templates/index.html:94
-msgid "Main-Date"
-msgstr "2018년 6월 28일(목) ~ 2018년 6월 29일(금)"
+#: openinfradays/templates/base.html:76
+#: openinfradays/templates/speakers.html:11
+msgid "Speakers"
+msgstr "발표자"
 
-#: openinfradays/templates/index.html:95
-msgid "Main-Location"
-msgstr "코엑스 3F 컨퍼런스룸, 서울"
+#: openinfradays/templates/base.html:77
+msgid "Hand-On-Lab"
+msgstr "핸즈 온 랩"
 
-#: openinfradays/templates/index.html:116
-msgid "Main-Introduce-Msg"
-msgstr "한국에서 열리는 오픈소스 인프라 컨퍼런스!"
-
-#: openinfradays/templates/index.html:124
-msgid "Main-Opensource-Desc"
-msgstr "오픈소스는 오픈오픈해"
-
-#: openinfradays/templates/index.html:134
-msgid "Main-Community-Desc"
-msgstr "커뮤니티가 채고시다!"
-
-#: openinfradays/templates/index.html:144
-msgid "Main-Share-Desc"
-msgstr "경험을 나누어요"
-
-#: openinfradays/templates/index.html:174
+#: openinfradays/templates/base.html:80 openinfradays/templates/index.html:94
 msgid "Sponsors"
 msgstr "스폰서"
 
-#: openinfradays/templates/index.html:175
+#: openinfradays/templates/base.html:81
+msgid "venue"
+msgstr "장소"
+
+#: openinfradays/templates/base.html:82
+msgid "Registration"
+msgstr "등록하기"
+
+#: openinfradays/templates/index.html:20
+msgid "Main-Date"
+msgstr "2018년 6월 28일(목) ~ 2018년 6월 29일(금)"
+
+#: openinfradays/templates/index.html:21
+msgid "Main-Location"
+msgstr "코엑스 3F 컨퍼런스룸, 서울"
+
+#: openinfradays/templates/index.html:42
+msgid "Main-Introduce-Msg"
+msgstr "한국에서 열리는 오픈소스 인프라 컨퍼런스!"
+
+#: openinfradays/templates/index.html:50
+msgid "Main-Opensource-Desc"
+msgstr "오픈소스는 오픈오픈해"
+
+#: openinfradays/templates/index.html:60
+msgid "Main-Community-Desc"
+msgstr "커뮤니티가 채고시다!"
+
+#: openinfradays/templates/index.html:70
+msgid "Main-Share-Desc"
+msgstr "경험을 나누어요"
+
+#: openinfradays/templates/index.html:95
 msgid "Main-Sponsors-Desc"
 msgstr "OpenInfraDays Korea 2018의 후원사"

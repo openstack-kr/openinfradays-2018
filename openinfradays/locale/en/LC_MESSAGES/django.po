@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 12:57+0900\n"
+"POT-Creation-Date: 2018-05-16 04:24+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,55 +26,77 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: openinfradays/templates/index.html:11 openinfradays/templates/index.html:14
-#: openinfradays/templates/index.html:15 openinfradays/templates/index.html:18
+#: openinfradays/templates/base.html:11 openinfradays/templates/base.html:14
+#: openinfradays/templates/base.html:15
 msgid "OpenInfraDays Korea 2018"
 msgstr ""
 
-#: openinfradays/templates/index.html:69
+#: openinfradays/templates/base.html:18
+msgid "OpenInfraDays Koresa 2018"
+msgstr ""
+
+#: openinfradays/templates/base.html:68
 msgid "Home"
 msgstr ""
 
-#: openinfradays/templates/index.html:70
+#: openinfradays/templates/base.html:70
 msgid "Program"
 msgstr ""
 
-#: openinfradays/templates/index.html:71
-msgid "venue"
+#: openinfradays/templates/base.html:74
+#: openinfradays/templates/schedule.html:11
+msgid "Schedule"
 msgstr ""
 
-#: openinfradays/templates/index.html:72
-msgid "Registrate"
+#: openinfradays/templates/base.html:75 openinfradays/templates/program.html:11
+msgid "Programs"
 msgstr ""
 
-#: openinfradays/templates/index.html:94
-msgid "Main-Date"
-msgstr "28 June 2018(Thu) ~ 29 June 2018(Fri)"
-
-#: openinfradays/templates/index.html:95
-msgid "Main-Location"
-msgstr "Coex 3F Conference Room, Seoul"
-
-#: openinfradays/templates/index.html:116
-msgid "Main-Introduce-Msg"
+#: openinfradays/templates/base.html:76
+#: openinfradays/templates/speakers.html:11
+msgid "Speakers"
 msgstr ""
 
-#: openinfradays/templates/index.html:124
-msgid "Main-Opensource-Desc"
+#: openinfradays/templates/base.html:77
+msgid "Hand-On-Lab"
 msgstr ""
 
-#: openinfradays/templates/index.html:134
-msgid "Main-Community-Desc"
-msgstr ""
-
-#: openinfradays/templates/index.html:144
-msgid "Main-Share-Desc"
-msgstr ""
-
-#: openinfradays/templates/index.html:174
+#: openinfradays/templates/base.html:80 openinfradays/templates/index.html:94
 msgid "Sponsors"
 msgstr ""
 
-#: openinfradays/templates/index.html:175
+#: openinfradays/templates/base.html:81
+msgid "venue"
+msgstr ""
+
+#: openinfradays/templates/base.html:82
+msgid "Registration"
+msgstr ""
+
+#: openinfradays/templates/index.html:20
+msgid "Main-Date"
+msgstr "28 June 2018(Thu) ~ 29 June 2018(Fri)"
+
+#: openinfradays/templates/index.html:21
+msgid "Main-Location"
+msgstr "Coex 3F Conference Room, Seoul"
+
+#: openinfradays/templates/index.html:42
+msgid "Main-Introduce-Msg"
+msgstr ""
+
+#: openinfradays/templates/index.html:50
+msgid "Main-Opensource-Desc"
+msgstr ""
+
+#: openinfradays/templates/index.html:60
+msgid "Main-Community-Desc"
+msgstr ""
+
+#: openinfradays/templates/index.html:70
+msgid "Main-Share-Desc"
+msgstr ""
+
+#: openinfradays/templates/index.html:95
 msgid "Main-Sponsors-Desc"
 msgstr ""

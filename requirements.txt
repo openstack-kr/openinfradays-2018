@@ -1,1 +1,4 @@
 django==2.0.5
+django-summernote==0.8.8.7
+django-modeltranslation==0.13-beta1
+Pillow==5.1.0

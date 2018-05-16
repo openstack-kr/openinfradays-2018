@@ -26,18 +26,22 @@ SECRET_KEY = '_!6&ssq$bm@5pnyp^&lse30q^3_ct4nnl8f)lds8(l#ss&sa*v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'dev.openinfradays.kr']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.flatpages',
+    'django_summernote',
     'openinfradays',
 ]
 
@@ -127,4 +131,11 @@ LOCALE_PATHS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join("var", "www", "openinfradays-2018",
+                           "collected_static")
