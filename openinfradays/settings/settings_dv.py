@@ -137,5 +137,5 @@ STATICFILES_DIRS = [
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join("var", "www", "openinfradays-2018",
+STATIC_ROOT = os.path.join("/var", "www", "openinfradays-2018",
                            "collected_static")
