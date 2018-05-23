@@ -1,4 +1,5 @@
 from modeltranslation.translator import translator, TranslationOptions
+from django.contrib.flatpages.models import FlatPage
 from .models import Program, Speaker, ProgramCategory, ProgramDate, \
     ProgramTime, Room
 
@@ -32,3 +33,7 @@ class RoomTranslationOptions(TranslationOptions):
     fields = ()
 translator.register(Room, RoomTranslationOptions)
 
+
+class FlatPageTranslationOptions(TranslationOptions):
+    fields = ('title', 'content',)
+translator.register(FlatPage, FlatPageTranslationOptions)

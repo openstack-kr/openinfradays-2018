@@ -1,5 +1,8 @@
+from django.db import models
 from django.contrib import admin
+from django.contrib.flatpages.models import FlatPage
 from django_summernote.admin import SummernoteModelAdmin
+from django_summernote.widgets import SummernoteWidget
 from modeltranslation.admin import TranslationAdmin
 
 from .models import Program, Speaker, ProgramCategory, ProgramDate, \
@@ -49,3 +52,19 @@ class ProgramTimeAdmin(SummernoteModelAdmin, TranslationAdmin):
     list_editable = ('name', 'begin', 'end', 'day')
     ordering = ('id', )
 admin.site.register(ProgramTime, ProgramTimeAdmin)
+
+
+class SummernoteWidgetWithCustomToolbar(SummernoteWidget):
+    def template_contexts(self):
+        contexts = super(SummernoteWidgetWithCustomToolbar, self)\
+            .template_contexts()
+        contexts['width'] = '960px'
+        return contexts
+
+
+class FlatPageAdmin(TranslationAdmin):
+    formfield_overrides = {
+        models.TextField: {'widget': SummernoteWidgetWithCustomToolbar}}
+
+admin.site.unregister(FlatPage)
+admin.site.register(FlatPage, FlatPageAdmin)

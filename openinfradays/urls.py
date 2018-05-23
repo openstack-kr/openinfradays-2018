@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.flatpages import views
 from django.urls import path
 
 from .views import index, ProgramList, schedule_page
@@ -26,4 +27,8 @@ urlpatterns = [
     url(r'^programs', ProgramList.as_view()),
     url(r'^schedule', schedule_page),
     path('admin/', admin.site.urls),
+
+    # For flatpages
+    url(r'^pages/', include('django.contrib.flatpages.urls')),
+    url(r'^(?P<url>.*/)$', views.flatpage, name='flatpage'),
 ]
