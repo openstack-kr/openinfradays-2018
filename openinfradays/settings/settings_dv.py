@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.flatpages',
     'django_summernote',
+    'crispy_forms',
     'openinfradays',
 ]
 
@@ -129,6 +130,8 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
@@ -140,3 +143,13 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join("/var", "www", "openinfradays-2018",
                            "collected_static")
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_TITLE = "OpenInfraDays Korea 2018 Login"
+EMAIL_USE_TLS = True
+EMAIL_HOST = ''
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

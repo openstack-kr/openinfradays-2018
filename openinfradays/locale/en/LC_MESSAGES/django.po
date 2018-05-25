@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-16 04:24+0900\n"
+"POT-Creation-Date: 2018-05-24 22:57+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: openinfradays/settings/settings_dv.py:119
+#: openinfradays/forms.py:21 openinfradays/templates/nav.html:26
+#: openinfradays/views.py:44
+msgid "Login"
+msgstr ""
+
+#: openinfradays/settings/settings_dv.py:125
 msgid "Korean"
 msgstr ""
 
-#: openinfradays/settings/settings_dv.py:120
+#: openinfradays/settings/settings_dv.py:126
 msgid "English"
 msgstr ""
 
@@ -33,44 +38,6 @@ msgstr ""
 
 #: openinfradays/templates/base.html:18
 msgid "OpenInfraDays Koresa 2018"
-msgstr ""
-
-#: openinfradays/templates/base.html:68
-msgid "Home"
-msgstr ""
-
-#: openinfradays/templates/base.html:70
-msgid "Program"
-msgstr ""
-
-#: openinfradays/templates/base.html:74
-#: openinfradays/templates/schedule.html:11
-msgid "Schedule"
-msgstr ""
-
-#: openinfradays/templates/base.html:75 openinfradays/templates/program.html:11
-msgid "Programs"
-msgstr ""
-
-#: openinfradays/templates/base.html:76
-#: openinfradays/templates/speakers.html:11
-msgid "Speakers"
-msgstr ""
-
-#: openinfradays/templates/base.html:77
-msgid "Hand-On-Lab"
-msgstr ""
-
-#: openinfradays/templates/base.html:80 openinfradays/templates/index.html:94
-msgid "Sponsors"
-msgstr ""
-
-#: openinfradays/templates/base.html:81
-msgid "venue"
-msgstr ""
-
-#: openinfradays/templates/base.html:82
-msgid "Registration"
 msgstr ""
 
 #: openinfradays/templates/index.html:20
@@ -97,6 +64,60 @@ msgstr ""
 msgid "Main-Share-Desc"
 msgstr ""
 
+#: openinfradays/templates/index.html:94 openinfradays/templates/nav.html:17
+msgid "Sponsors"
+msgstr ""
+
 #: openinfradays/templates/index.html:95
 msgid "Main-Sponsors-Desc"
+msgstr ""
+
+#: openinfradays/templates/login.html:12
+msgid "Login via email"
+msgstr ""
+
+#: openinfradays/templates/login_sendmail.html:10
+msgid "One-time login url was sent to your email. Please check your inbox"
+msgstr ""
+
+#: openinfradays/templates/login_sendmail_fail.html:10
+msgid ""
+"Failed to send email. Please contact to administrator(master@openinfradays."
+"kr)"
+msgstr ""
+
+#: openinfradays/templates/nav.html:5
+msgid "Home"
+msgstr ""
+
+#: openinfradays/templates/nav.html:7
+msgid "Program"
+msgstr ""
+
+#: openinfradays/templates/nav.html:11 openinfradays/templates/schedule.html:11
+msgid "Schedule"
+msgstr ""
+
+#: openinfradays/templates/nav.html:12 openinfradays/templates/program.html:11
+msgid "Programs"
+msgstr ""
+
+#: openinfradays/templates/nav.html:13 openinfradays/templates/speakers.html:11
+msgid "Speakers"
+msgstr ""
+
+#: openinfradays/templates/nav.html:14
+msgid "Hand-On-Lab"
+msgstr ""
+
+#: openinfradays/templates/nav.html:18
+msgid "venue"
+msgstr ""
+
+#: openinfradays/templates/nav.html:19
+msgid "Registration"
+msgstr ""
+
+#: openinfradays/templates/nav.html:24
+msgid "Profile"
 msgstr ""

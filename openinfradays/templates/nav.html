@@ -1,0 +1,29 @@
+{% load i18n %}
+<nav id="nav">
+
+    <ul class="main-menu nav navbar-nav">
+        <li><a href="/">{% trans "Home" %}</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Program" %}
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a class="dropdown-link" href="/schedule">{% trans "Schedule" %}</a></li>
+                <li><a class="dropdown-link" href="/programs">{% trans "Programs" %}</a></li>
+                <li><a class="dropdown-link" href="/speakers">{% trans "Speakers" %}</a></li>
+                <li><a class="dropdown-link" href="/hand-on-lab">{% trans "Hand-On-Lab" %}</a></li>
+            </ul>
+        </li>
+        <li><a href="#">{% trans "Sponsors" %}</a></li>
+        <li><a href="#">{% trans "venue" %}</a></li>
+        <li><a href="#">{% trans "Registration" %}</a></li>
+    </ul>
+
+    <ul class="main-menu nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+            <li><a href="#">{% trans "Profile" %}</a></li>
+        {% else %}
+            <li><a href="/login">{% trans "Login" %}</a></li>
+        {% endif %}
+    </ul>
+</nav>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-16 04:24+0900\n"
+"POT-Creation-Date: 2018-05-24 22:57+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: openinfradays/settings/settings_dv.py:119
+#: openinfradays/forms.py:21 openinfradays/templates/nav.html:26
+#: openinfradays/views.py:44
+msgid "Login"
+msgstr "로그인"
+
+#: openinfradays/settings/settings_dv.py:125
 msgid "Korean"
 msgstr ""
 
-#: openinfradays/settings/settings_dv.py:120
+#: openinfradays/settings/settings_dv.py:126
 msgid "English"
 msgstr ""
 
@@ -34,44 +39,6 @@ msgstr ""
 #: openinfradays/templates/base.html:18
 msgid "OpenInfraDays Koresa 2018"
 msgstr ""
-
-#: openinfradays/templates/base.html:68
-msgid "Home"
-msgstr "행사 소개"
-
-#: openinfradays/templates/base.html:70
-msgid "Program"
-msgstr "프로그램"
-
-#: openinfradays/templates/base.html:74
-#: openinfradays/templates/schedule.html:11
-msgid "Schedule"
-msgstr "시간표"
-
-#: openinfradays/templates/base.html:75 openinfradays/templates/program.html:11
-msgid "Programs"
-msgstr "프로그램 목록"
-
-#: openinfradays/templates/base.html:76
-#: openinfradays/templates/speakers.html:11
-msgid "Speakers"
-msgstr "발표자"
-
-#: openinfradays/templates/base.html:77
-msgid "Hand-On-Lab"
-msgstr "핸즈 온 랩"
-
-#: openinfradays/templates/base.html:80 openinfradays/templates/index.html:94
-msgid "Sponsors"
-msgstr "스폰서"
-
-#: openinfradays/templates/base.html:81
-msgid "venue"
-msgstr "장소"
-
-#: openinfradays/templates/base.html:82
-msgid "Registration"
-msgstr "등록하기"
 
 #: openinfradays/templates/index.html:20
 msgid "Main-Date"
@@ -97,6 +64,61 @@ msgstr "커뮤니티가 채고시다!"
 msgid "Main-Share-Desc"
 msgstr "경험을 나누어요"
 
+#: openinfradays/templates/index.html:94 openinfradays/templates/nav.html:17
+msgid "Sponsors"
+msgstr "스폰서"
+
 #: openinfradays/templates/index.html:95
 msgid "Main-Sponsors-Desc"
 msgstr "OpenInfraDays Korea 2018의 후원사"
+
+#: openinfradays/templates/login.html:12
+msgid "Login via email"
+msgstr "이메일로 로그인"
+
+#: openinfradays/templates/login_sendmail.html:10
+msgid "One-time login url was sent to your email. Please check your inbox"
+msgstr ""
+"일회용 로그인 URL이 이메일로 발송되었습니다. 메일함을 확인해주시기 바랍니다."
+
+#: openinfradays/templates/login_sendmail_fail.html:10
+msgid ""
+"Failed to send email. Please contact to administrator(master@openinfradays."
+"kr)"
+msgstr "이메일 발송에 실패하였습니다. 관리자(master@openinfradays.kr)에게 연락바랍니다."
+
+#: openinfradays/templates/nav.html:5
+msgid "Home"
+msgstr "행사 소개"
+
+#: openinfradays/templates/nav.html:7
+msgid "Program"
+msgstr "프로그램"
+
+#: openinfradays/templates/nav.html:11 openinfradays/templates/schedule.html:11
+msgid "Schedule"
+msgstr "시간표"
+
+#: openinfradays/templates/nav.html:12 openinfradays/templates/program.html:11
+msgid "Programs"
+msgstr "프로그램 목록"
+
+#: openinfradays/templates/nav.html:13 openinfradays/templates/speakers.html:11
+msgid "Speakers"
+msgstr "발표자"
+
+#: openinfradays/templates/nav.html:14
+msgid "Hand-On-Lab"
+msgstr "핸즈 온 랩"
+
+#: openinfradays/templates/nav.html:18
+msgid "venue"
+msgstr "장소"
+
+#: openinfradays/templates/nav.html:19
+msgid "Registration"
+msgstr "등록하기"
+
+#: openinfradays/templates/nav.html:24
+msgid "Profile"
+msgstr "프로필"

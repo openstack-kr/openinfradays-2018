@@ -1,5 +1,16 @@
 from django.db import models
 from django.template.defaultfilters import date as _date
+from uuid import uuid4
+
+
+class AuthToken(models.Model):
+    token = models.CharField(max_length=64)
+    email = models.EmailField(max_length=100)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        self.token = str(uuid4())
+        super(AuthToken, self).save(*args, **kwargs)
 
 
 class Speaker(models.Model):
@@ -46,6 +57,7 @@ class ProgramTime(models.Model):
 
     def __str__(self):
         return '%s - %s (%s)' % (self.begin, self.end, self.day)
+
 
 class Program(models.Model):
     name = models.CharField(max_length=255, db_index=True)
