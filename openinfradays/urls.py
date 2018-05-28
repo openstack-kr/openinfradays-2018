@@ -18,17 +18,22 @@ from django.contrib import admin
 from django.contrib.flatpages import views
 from django.urls import path
 
-from .views import index, ProgramList, schedule_page, login, process_login
+from .views import index, ProgramList, schedule_page, login, process_login, \
+    HandOnLabList, ProgramDetail
 
 urlpatterns = [
     url(r'^$', index),
     url(r'^summernote/', include('django_summernote.urls')),
     url(r'^index.html', index, name='index'),
     url(r'^programs', ProgramList.as_view()),
+    url(r'^program/(?P<pk>\d+)$', ProgramDetail.as_view(), name='program'),
     url(r'^schedule', schedule_page),
+    url(r'^hand-on-lab', HandOnLabList.as_view()),
     url(r'^login/$', login),
     url(r'^login/process/(?P<token>[a-z0-9\-]+)$', process_login),
     path('admin/', admin.site.urls),
+
+    url(r'^registration/', include('registration.urls')),
 
     # For flatpages
     url(r'^pages/', include('django.contrib.flatpages.urls')),

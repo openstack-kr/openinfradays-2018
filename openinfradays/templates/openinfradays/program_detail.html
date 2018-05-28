@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- Home -->
+<div class="hero-area section">
+
+    <div class="container">
+        <div class="row">
+            <h1>{{ object.name }}</h1>
+        </div>
+        <ul class="list-group program_detail">
+            <li class="list-group-item">
+                <b>{% trans "speaker" %}: </b>{{ program.speaker.name}}
+            </li>
+            <li class="list-group-item">
+                <b>{% trans "category" %}: </b>{{ program.category.name }}
+            </li>
+            <li class="list-group-item">
+                <b>{% trans "date" %}: </b>{{ program.date }} {{ program.get_times }}
+            </li>
+            <li class="list-group-item">
+                <b>{% trans "room" %}: </b>{{ program.room.name }}
+            </li>
+            <li class="list-group-item">
+                <b>{% trans "slide" %}: </b>{{ program.slide_url | urlize }}
+            </li>
+            <li class="list-group-item">
+                <b>{% trans "video" %}: </b>{{ program.video_url | urlize }}
+            </li>
+        </ul>
+
+        <div class="row">
+            <h2>{% trans "description" %}</h2>
+            {{ program.desc | safe}}
+        </div>
+    </div>
+
+</div>
+<!-- /Home -->
+{% endblock %}

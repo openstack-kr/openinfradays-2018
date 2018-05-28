@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-24 22:57+0900\n"
+"POT-Creation-Date: 2018-05-27 17:51+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: openinfradays/forms.py:21 openinfradays/templates/nav.html:26
-#: openinfradays/views.py:44
+#: openinfradays/views.py:52
 msgid "Login"
 msgstr "로그인"
 
@@ -32,13 +32,14 @@ msgid "English"
 msgstr ""
 
 #: openinfradays/templates/base.html:11 openinfradays/templates/base.html:14
-#: openinfradays/templates/base.html:15
+#: openinfradays/templates/base.html:15 openinfradays/templates/base.html:18
 msgid "OpenInfraDays Korea 2018"
 msgstr ""
 
-#: openinfradays/templates/base.html:18
-msgid "OpenInfraDays Koresa 2018"
-msgstr ""
+#: openinfradays/templates/hand_on_lab.html:11
+#: openinfradays/templates/nav.html:14
+msgid "Hand-On-Lab"
+msgstr "핸즈 온 랩"
 
 #: openinfradays/templates/index.html:20
 msgid "Main-Date"
@@ -85,7 +86,9 @@ msgstr ""
 msgid ""
 "Failed to send email. Please contact to administrator(master@openinfradays."
 "kr)"
-msgstr "이메일 발송에 실패하였습니다. 관리자(master@openinfradays.kr)에게 연락바랍니다."
+msgstr ""
+"이메일 발송에 실패하였습니다. 관리자(master@openinfradays.kr)에게 연락바랍니"
+"다."
 
 #: openinfradays/templates/nav.html:5
 msgid "Home"
@@ -95,7 +98,8 @@ msgstr "행사 소개"
 msgid "Program"
 msgstr "프로그램"
 
-#: openinfradays/templates/nav.html:11 openinfradays/templates/schedule.html:11
+#: openinfradays/templates/nav.html:11 openinfradays/templates/profile.html:11
+#: openinfradays/templates/schedule.html:11
 msgid "Schedule"
 msgstr "시간표"
 
@@ -106,10 +110,6 @@ msgstr "프로그램 목록"
 #: openinfradays/templates/nav.html:13 openinfradays/templates/speakers.html:11
 msgid "Speakers"
 msgstr "발표자"
-
-#: openinfradays/templates/nav.html:14
-msgid "Hand-On-Lab"
-msgstr "핸즈 온 랩"
 
 #: openinfradays/templates/nav.html:18
 msgid "venue"
@@ -122,3 +122,31 @@ msgstr "등록하기"
 #: openinfradays/templates/nav.html:24
 msgid "Profile"
 msgstr "프로필"
+
+#: openinfradays/templates/openinfradays/program_detail.html:15
+msgid "speaker"
+msgstr "발표자"
+
+#: openinfradays/templates/openinfradays/program_detail.html:18
+msgid "category"
+msgstr "카테고리"
+
+#: openinfradays/templates/openinfradays/program_detail.html:21
+msgid "date"
+msgstr "일자"
+
+#: openinfradays/templates/openinfradays/program_detail.html:24
+msgid "room"
+msgstr "방"
+
+#: openinfradays/templates/openinfradays/program_detail.html:27
+msgid "slide"
+msgstr "슬라이드"
+
+#: openinfradays/templates/openinfradays/program_detail.html:30
+msgid "video"
+msgstr "동영상"
+
+#: openinfradays/templates/openinfradays/program_detail.html:35
+msgid "description"
+msgstr "자세한 내용"

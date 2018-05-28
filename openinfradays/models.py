@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.shortcuts import reverse
 from django.template.defaultfilters import date as _date
 from uuid import uuid4
 
@@ -13,6 +15,14 @@ class AuthToken(models.Model):
         super(AuthToken, self).save(*args, **kwargs)
 
 
+class Profile(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    company = models.CharField(max_length=100)
+    phone_number = models.CharField(max_length=20)
+    created = models.DateTimeField(auto_now_add=True)
+
+
 class Speaker(models.Model):
     slug = models.SlugField(max_length=100, unique=True)
     name = models.CharField(max_length=100, db_index=True)
@@ -21,6 +31,9 @@ class Speaker(models.Model):
                               null=True, blank=True)
     image = models.ImageField(upload_to='speaker', null=True, blank=True)
     desc = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
 
 
 class ProgramCategory(models.Model):
@@ -68,7 +81,20 @@ class Program(models.Model):
 
     date = models.ForeignKey(ProgramDate, null=True, blank=True,
                              on_delete=True)
-    rooms = models.ManyToManyField(Room, blank=True)
+    room = models.ForeignKey(Room, null=True, on_delete=models.SET_NULL)
     times = models.ManyToManyField(ProgramTime, blank=True)
     category = models.ForeignKey(ProgramCategory, null=True, blank=True,
                                  on_delete=True)
+    speaker = models.ForeignKey(Speaker, null=True, on_delete=False)
+
+    def get_url(self):
+        return reverse('program', args=[self.id])
+
+    def get_times(self):
+        times = self.times.all()
+
+        if times:
+            return '%s - %s' % (times[0].begin.strftime("%H:%M"),
+                                times[len(times) - 1].end.strftime("%H:%M"))
+        else:
+            return "Not arranged yet"

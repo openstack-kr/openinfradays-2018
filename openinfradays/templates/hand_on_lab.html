@@ -8,7 +8,7 @@
 
     <div class="container">
         <div class="row">
-            <h1>{% trans "Programs" %}</h1>
+            <h1>{% trans "Hand-On-Lab" %}</h1>
         </div>
         <div class="row">
             {% if not object_list %}
@@ -25,7 +25,7 @@
             <ul class="item-list">
                 {% for program in obj.program_set.all %}
                     <li class="program-list-title">
-                    <a href="{{ program.get_url }}">{{ program.name }}</a>
+                    <a href="{{ program.get_absolute_url }}">{{ program.name }}</a>
                     </li>
                 {% endfor %}
             </ul>
