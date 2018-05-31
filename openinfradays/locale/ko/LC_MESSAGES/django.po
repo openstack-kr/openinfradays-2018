@@ -25,11 +25,11 @@ msgstr "로그인"
 
 #: openinfradays/settings/settings_dv.py:126
 msgid "Korean"
-msgstr ""
+msgstr "한국어"
 
 #: openinfradays/settings/settings_dv.py:127
 msgid "English"
-msgstr ""
+msgstr "영어"
 
 #: openinfradays/templates/base.html:11
 msgid "OpenInfraDays Korea 2018"
@@ -43,7 +43,11 @@ msgstr ""
 #: openinfradays/templates/hand_on_lab.html:11
 #: openinfradays/templates/nav.html:14
 msgid "Hand-On-Lab"
-msgstr "핸즈 온 랩"
+msgstr "핸즈온랩"
+
+#: openinfradays/templates/index.html:19
+msgid "Main-Description"
+msgstr "Open Infrastructure: OpenStack, Containers, and Cloud Native Computing"
 
 #: openinfradays/templates/index.html:20
 msgid "Main-Date"

@@ -45,9 +45,13 @@ msgstr ""
 msgid "Hand-On-Lab"
 msgstr ""
 
+#: openinfradays/templates/index.html:19
+msgid "Main-Description"
+msgstr "Open Infrastructure: OpenStack, Containers, and Cloud Native Computing"
+
 #: openinfradays/templates/index.html:20
 msgid "Main-Date"
-msgstr "28 June 2018(Thu) ~ 29 June 2018(Fri)"
+msgstr "June 28, 2018 (Thu) ~ June 29, 2018 (Fri)"
 
 #: openinfradays/templates/index.html:21
 msgid "Main-Location"
