@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-27 17:51+0900\n"
+"POT-Creation-Date: 2018-05-31 22:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,17 +23,21 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: openinfradays/settings/settings_dv.py:125
+#: openinfradays/settings/settings_dv.py:126
 msgid "Korean"
 msgstr ""
 
-#: openinfradays/settings/settings_dv.py:126
+#: openinfradays/settings/settings_dv.py:127
 msgid "English"
 msgstr ""
 
-#: openinfradays/templates/base.html:11 openinfradays/templates/base.html:14
-#: openinfradays/templates/base.html:15 openinfradays/templates/base.html:18
+#: openinfradays/templates/base.html:11
 msgid "OpenInfraDays Korea 2018"
+msgstr ""
+
+#: openinfradays/templates/base.html:14 openinfradays/templates/base.html:15
+#: openinfradays/templates/base.html:18
+msgid "OpenInfra Days Korea 2018"
 msgstr ""
 
 #: openinfradays/templates/hand_on_lab.html:11
@@ -118,6 +122,10 @@ msgstr ""
 
 #: openinfradays/templates/nav.html:24
 msgid "Profile"
+msgstr ""
+
+#: openinfradays/templates/nav.html:29
+msgid "Language"
 msgstr ""
 
 #: openinfradays/templates/openinfradays/program_detail.html:15

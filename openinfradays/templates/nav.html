@@ -25,5 +25,19 @@
         {% else %}
             <li><a href="/login">{% trans "Login" %}</a></li>
         {% endif %}
+        <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Language" %}
+                <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu" role="menu">
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    {% language language.code %}
+                        <li><a class="dropdown-link" href="{% url 'index' %}">{{ language.name_local }}</a></li>
+                    {% endlanguage %}
+                {% endfor %}
+            </ul>
+        </li>
     </ul>
 </nav>
