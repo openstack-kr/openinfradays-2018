@@ -1,0 +1,49 @@
+{% load i18n %}
+{% load staticfiles %}
+
+<!-- Courses -->
+<div id="courses" class="section">
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- row -->
+        <div class="row">
+            <div class="section-header">
+                <h2>{% trans "Sponsors" %}</h2>
+                <p class="lead">{% trans "Main-Sponsors-Desc" %}</p>
+            </div>
+        </div>
+        <!-- /row -->
+
+        <!-- courses -->
+        <div id="courses-wrapper">
+
+            <!-- row -->
+            <div class="row">
+
+                {% for level in levels %}
+                    <h3> {{ level.name }}</h3>
+                    {% for sponsor in level.sponsor_set.all %}
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div class="course">
+                                <a href="#" class="course-img">
+                                    <img src="{% static "img/sponsor_sample.png" %}" alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title text-center" href="#">{{ sponsor.name }}</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+
+
+
+            </div>
+            <!-- /row -->
+        </div>
+    </div>
+    <!-- container -->
+
+</div>
+<!-- /Courses -->

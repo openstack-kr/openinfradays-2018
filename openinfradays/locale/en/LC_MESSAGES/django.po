@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 22:10+0900\n"
+"POT-Creation-Date: 2018-06-07 00:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: openinfradays/settings/settings_dv.py:126
+#: openinfradays/settings/settings_dv.py:125
 msgid "Korean"
 msgstr ""
 
-#: openinfradays/settings/settings_dv.py:127
+#: openinfradays/settings/settings_dv.py:126
 msgid "English"
 msgstr ""
 
@@ -45,39 +45,39 @@ msgstr ""
 msgid "Hand-On-Lab"
 msgstr ""
 
-#: openinfradays/templates/index.html:19
+#: openinfradays/templates/index.html:22
 msgid "Main-Description"
 msgstr "Open Infrastructure: OpenStack, Containers, and Cloud Native Computing"
 
-#: openinfradays/templates/index.html:20
+#: openinfradays/templates/index.html:26
 msgid "Main-Date"
 msgstr "June 28, 2018 (Thu) ~ June 29, 2018 (Fri)"
 
-#: openinfradays/templates/index.html:21
+#: openinfradays/templates/index.html:30
 msgid "Main-Location"
 msgstr "Coex 3F Conference Room, Seoul"
 
-#: openinfradays/templates/index.html:42
+#: openinfradays/templates/index.html:52
 msgid "Main-Introduce-Msg"
 msgstr ""
 
-#: openinfradays/templates/index.html:50
+#: openinfradays/templates/index.html:60
 msgid "Main-Opensource-Desc"
 msgstr ""
 
-#: openinfradays/templates/index.html:60
+#: openinfradays/templates/index.html:70
 msgid "Main-Community-Desc"
 msgstr ""
 
-#: openinfradays/templates/index.html:70
+#: openinfradays/templates/index.html:80
 msgid "Main-Share-Desc"
 msgstr ""
 
-#: openinfradays/templates/index.html:94 openinfradays/templates/nav.html:17
+#: openinfradays/templates/index.html:104 openinfradays/templates/nav.html:17
 msgid "Sponsors"
 msgstr ""
 
-#: openinfradays/templates/index.html:95
+#: openinfradays/templates/index.html:105
 msgid "Main-Sponsors-Desc"
 msgstr ""
 

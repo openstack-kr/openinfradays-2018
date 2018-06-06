@@ -6,7 +6,31 @@ from django_summernote.widgets import SummernoteWidget
 from modeltranslation.admin import TranslationAdmin
 
 from .models import Program, Speaker, ProgramCategory, ProgramDate, \
-    ProgramTime, Room
+    ProgramTime, Room, Sponsor, SponsorLevel
+
+
+class SummernoteWidgetWithCustomToolbar(SummernoteWidget):
+    def template_contexts(self):
+        contexts = super(SummernoteWidgetWithCustomToolbar, self).template_contexts()
+        contexts['width'] = '960px'
+        return contexts
+
+
+class SponsorAdmin(SummernoteModelAdmin, TranslationAdmin):
+    formfield_overrides = {models.TextField: {'widget': SummernoteWidgetWithCustomToolbar}}
+    list_display = ('id', 'name',)
+    ordering = ('name',)
+    list_editable = ('name',)
+    search_fields = ('name',)
+admin.site.register(Sponsor, SponsorAdmin)
+
+
+class SponsorLevelAdmin(SummernoteModelAdmin, TranslationAdmin):
+    list_display = ('id', 'order', 'name',)
+    list_editable = ('order', 'name',)
+    ordering = ('order',)
+    search_fields = ('name',)
+admin.site.register(SponsorLevel, SponsorLevelAdmin)
 
 
 class ProgramAdmin(SummernoteModelAdmin, TranslationAdmin):
