@@ -98,3 +98,37 @@ class Program(models.Model):
                                 times[len(times) - 1].end.strftime("%H:%M"))
         else:
             return "Not arranged yet"
+
+
+class SponsorLevelManager(models.Manager):
+    def get_queryset(self):
+        return super(SponsorLevelManager, self).get_queryset()\
+            .all().order_by('order')
+
+
+class SponsorLevel(models.Model):
+    name = models.CharField(max_length=100, db_index=True)
+    order = models.IntegerField(default=1)
+
+    objects = SponsorLevelManager()
+
+    def __str__(self):
+        return self.name
+
+
+class Sponsor(models.Model):
+    name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='sponsor', null=True, blank=True)
+    url = models.CharField(max_length=1024, null=True, blank=True)
+    desc = models.TextField(null=True, blank=True)
+    level = models.ForeignKey(SponsorLevel, null=True, blank=True,
+                              on_delete=models.SET_NULL)
+
+    class Meta:
+        ordering = ['id']
+
+    def get_url(self):
+        return reverse('sponsor', args=[self.id])
+
+    def __str__(self):
+        return self.name
