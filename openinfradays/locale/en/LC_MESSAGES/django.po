@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-07 00:38+0900\n"
+"POT-Creation-Date: 2018-06-10 01:15+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: openinfradays/forms.py:21 openinfradays/templates/nav.html:26
-#: openinfradays/views.py:52
+#: openinfradays/views.py:60
 msgid "Login"
 msgstr ""
 
-#: openinfradays/settings/settings_dv.py:125
+#: openinfradays/settings/settings_dv.py:126
 msgid "Korean"
 msgstr ""
 
-#: openinfradays/settings/settings_dv.py:126
+#: openinfradays/settings/settings_dv.py:127
 msgid "English"
 msgstr ""
 
@@ -45,41 +45,31 @@ msgstr ""
 msgid "Hand-On-Lab"
 msgstr ""
 
-#: openinfradays/templates/index.html:22
+#: openinfradays/templates/index.html:24
 msgid "Main-Description"
 msgstr "Open Infrastructure: OpenStack, Containers, and Cloud Native Computing"
 
-#: openinfradays/templates/index.html:26
+#: openinfradays/templates/index.html:28
 msgid "Main-Date"
 msgstr "June 28, 2018 (Thu) ~ June 29, 2018 (Fri)"
 
-#: openinfradays/templates/index.html:30
+#: openinfradays/templates/index.html:32
 msgid "Main-Location"
 msgstr "Coex 3F Conference Room, Seoul"
 
-#: openinfradays/templates/index.html:52
-msgid "Main-Introduce-Msg"
-msgstr ""
+#: openinfradays/templates/index.html:61
+msgid "Main-openinfrastructure-Desc"
+msgstr "Open Infrastructure Project(Openstack, CNCF, Ceph, etc..)"
 
-#: openinfradays/templates/index.html:60
-msgid "Main-Opensource-Desc"
-msgstr ""
-
-#: openinfradays/templates/index.html:70
+#: openinfradays/templates/index.html:71
 msgid "Main-Community-Desc"
 msgstr ""
+"Open Infrastructure communities are preparing a bigger event on Open "
+"Infrastructure."
 
-#: openinfradays/templates/index.html:80
+#: openinfradays/templates/index.html:81
 msgid "Main-Share-Desc"
-msgstr ""
-
-#: openinfradays/templates/index.html:104 openinfradays/templates/nav.html:17
-msgid "Sponsors"
-msgstr ""
-
-#: openinfradays/templates/index.html:105
-msgid "Main-Sponsors-Desc"
-msgstr ""
+msgstr "Share your experience and grow together."
 
 #: openinfradays/templates/login.html:12
 msgid "Login via email"
@@ -97,7 +87,7 @@ msgstr ""
 
 #: openinfradays/templates/nav.html:5
 msgid "Home"
-msgstr ""
+msgstr "OpenInfra Days"
 
 #: openinfradays/templates/nav.html:7
 msgid "Program"
@@ -114,6 +104,10 @@ msgstr ""
 
 #: openinfradays/templates/nav.html:13 openinfradays/templates/speakers.html:11
 msgid "Speakers"
+msgstr ""
+
+#: openinfradays/templates/nav.html:17 openinfradays/templates/sponsors.html:13
+msgid "Sponsors"
 msgstr ""
 
 #: openinfradays/templates/nav.html:18
@@ -159,3 +153,16 @@ msgstr ""
 #: openinfradays/templates/openinfradays/program_detail.html:35
 msgid "description"
 msgstr ""
+
+#: openinfradays/templates/openinfradays/sponsor_detail.html:16
+msgid "sponsor_level"
+msgstr "Sponsor Level"
+
+#: openinfradays/templates/openinfradays/sponsor_detail.html:19
+msgid "homepage"
+msgstr "Homepage"
+
+#: openinfradays/templates/openinfradays/sponsor_detail.html:24
+#| msgid "Main-Description"
+msgid "sponsor_description"
+msgstr "about"

@@ -5,12 +5,16 @@ from django.shortcuts import render, redirect, reverse
 from django.views.generic import ListView, DetailView
 from django.utils.translation import ugettext as _
 from .email import send_auth_email
-from .models import ProgramCategory, AuthToken, Profile, Program
+from .models import ProgramCategory, AuthToken, Profile, Program, Sponsor
 from .forms import EmailLoginForm
 
 
 def index(request):
     return render(request, 'index.html')
+
+
+def sponsors(request):
+    return render(request, 'sponsor_base.html')
 
 
 def schedule_page(request):
@@ -24,6 +28,10 @@ class ProgramList(ListView):
 
 class ProgramDetail(DetailView):
     model = Program
+
+
+class SponsorDetail(DetailView):
+    model = Sponsor
 
 
 class HandOnLabList(ListView):

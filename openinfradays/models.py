@@ -118,6 +118,7 @@ class SponsorLevel(models.Model):
 
 class Sponsor(models.Model):
     name = models.CharField(max_length=50)
+    slug = models.SlugField(max_length=100, null=True)
     image = models.ImageField(upload_to='sponsor', null=True, blank=True)
     url = models.CharField(max_length=1024, null=True, blank=True)
     desc = models.TextField(null=True, blank=True)

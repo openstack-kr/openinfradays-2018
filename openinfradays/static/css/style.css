@@ -109,12 +109,15 @@ blockquote:before{
 	border:1px solid #EBEBEB;
 }
 
-
+.sponsor img {
+	display:block;
+	margin:auto;
+}
 /* --- Section --- */
 .section {
 	position:relative;
 	padding-top:80px;
-	padding-bottom:80px;
+	padding-bottom:40px;
 }
 
 .section-hr {

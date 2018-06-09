@@ -18,10 +18,10 @@ class SummernoteWidgetWithCustomToolbar(SummernoteWidget):
 
 class SponsorAdmin(SummernoteModelAdmin, TranslationAdmin):
     formfield_overrides = {models.TextField: {'widget': SummernoteWidgetWithCustomToolbar}}
-    list_display = ('id', 'name',)
+    list_display = ('id', 'name', 'slug', )
     ordering = ('name',)
-    list_editable = ('name',)
-    search_fields = ('name',)
+    list_editable = ('name', 'slug',)
+    search_fields = ('name', 'slug',)
 admin.site.register(Sponsor, SponsorAdmin)
 
 

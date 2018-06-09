@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- Home -->
+<div class="hero-area section">
+
+    <div class="container sponsor">
+        <div class="row">
+            <h1>{{ object.name }}</h1>
+        </div>
+        <img src="{{ sponsor.image.url }}" style="">
+        <ul class="list-group program_detail">
+            <li class="list-group-item">
+                <b>{% trans "sponsor_level" %}: </b>{{ sponsor.level.name }}
+            </li>
+            <li class="list-group-item">
+                <b>{% trans "homepage" %}: </b><a href="{{ sponsor.url }}">{{ sponsor.url }}</a>
+            </li>
+        </ul>
+
+        <div class="row">
+            <h2>{% trans "sponsor_description" %}</h2>
+            {{ sponsor.desc | safe}}
+        </div>
+    </div>
+
+</div>
+<!-- /Home -->
+{% endblock %}
