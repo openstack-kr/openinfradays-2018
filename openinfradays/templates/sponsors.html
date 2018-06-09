@@ -19,8 +19,9 @@
         <div id="courses-wrapper">
 
             <!-- row -->
+
+            {% for level in levels %}
             <div class="row">
-                {% for level in levels %}
                     <h3> {{ level.name }}</h3>
                     {% for sponsor in level.sponsor_set.all %}
                         <div class="col-md-3 col-sm-6 col-xs-6">
@@ -33,8 +34,8 @@
                             </div>
                         </div>
                     {% endfor %}
-                {% endfor %}
             </div>
+            {% endfor %}
             <!-- /row -->
         </div>
     </div>

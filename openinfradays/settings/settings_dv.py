@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'dev.openinfradays.kr']
 
 
 # Application definition
+SITE_ID = 1
 
 INSTALLED_APPS = [
     'modeltranslation',
