@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'openinfradays',
+    'registration',
 ]
 
 MIDDLEWARE = [

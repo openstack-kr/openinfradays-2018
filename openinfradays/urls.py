@@ -27,7 +27,10 @@ from .views import index, ProgramList, schedule_page, login, process_login, \
 
 
 urlpatterns = [
+    url(r'^$', index, name='index'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^registration/', include('registration.urls')),
+    path('admin/', admin.site.urls),
 ]
 
 urlpatterns += i18n_patterns(
@@ -42,13 +45,6 @@ urlpatterns += i18n_patterns(
     url(r'^hand-on-lab', HandOnLabList.as_view()),
     url(r'^login/$', login),
     url(r'^login/process/(?P<token>[a-z0-9\-]+)$', process_login),
-    path('admin/', admin.site.urls),
-
-    url(r'^registration/', include('registration.urls')),
-
-    # For flatpages
-    url(r'^pages/', include('django.contrib.flatpages.urls')),
-    url(r'^(?P<url>.*/)$', views.flatpage, name='flatpage'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

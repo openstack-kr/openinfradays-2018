@@ -10,7 +10,7 @@ from .forms import EmailLoginForm
 
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'index2.html')
 
 
 def sponsors(request):
