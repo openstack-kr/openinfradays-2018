@@ -23,7 +23,7 @@ class Registration(models.Model):
 class InviteCode(models.Model):
     code = models.CharField(max_length=10)
     registered = models.BooleanField(default=False)
-    user = models.ForeignKey(Registration, null=True, on_delete=models.SET_NULL)
+    user = models.ForeignKey(Registration, blank=True, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.code
