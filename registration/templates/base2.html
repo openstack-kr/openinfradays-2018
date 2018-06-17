@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 		<title>{% trans "OpenInfra Days Korea 2018" %}</title>
@@ -17,14 +17,11 @@
         <meta property="og:url" content="{{ domain }}{{ request.path }}">
         <meta property="og:description" content="{% block og-desc %}{% trans "OpenInfra Days Korea 2018" %}{% endblock %}">
 
-		<!-- Google font -->
-		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
-
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="{% static "css/bootstrap.min.css" %}"/>
+		<link type="text/css" rel="stylesheet" href="{% static "css/bootstrap.css" %}"/>
 
 		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+		<link rel="stylesheet" href="{% static "css/fontawesome-all.css" %}">
 
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="{% static "css/style.css" %}"/>
@@ -44,33 +41,44 @@
 	<body>
         <!-- Header -->
         <header id="header" class="header-nav">
-            <div class="container">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-oidk">
+  <div class="container">
 
-                <div class="navbar-header">
-                    <!-- Logo -->
-                    <div class="navbar-brand">
-                        <a class="logo" href="/">
-                            <img src="{% static "img/logo-alt.png" %}" alt="logo">
-                        </a>
-                    </div>
-                    <!-- /Logo -->
+  <a class="navbar-brand" href="https://event.openinfradays.kr/"><img src="{% static "img/logo-alt.png" %}" style="max-height: 40px;"/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-                    <!-- Mobile toggle -->
-                    <button class="navbar-toggle">
-                        <span></span>
-                    </button>
-                    <!-- /Mobile toggle -->
-                </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link nav-white" href="https://event.openinfradays.kr/2018/about/">소개<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-white" href="https://event.openinfradays.kr/2018/schedule1/">1일차 프로그램</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-white" href="https://event.openinfradays.kr/2018/schedule2/">2일차 프로그램</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-white" href="https://event.openinfradays.kr/2018/location/">위치</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-white" href="https://event.openinfradays.kr/2018/registration/">등록 안내</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-            </div>
         </header>
         <!-- /Header -->
         {% block content %}{% endblock %}
 
-        <section style="background:#7f8c8d;">
-<div class="container" style="padding: 32px; color: white;">
-  <p>Copyright (c) 2018 OpenStack Korea Community All Rights Reserved.<br>
-  Code licensed under MIT, Contents licensed under CC BY-SA 4.0</p>
+        <section style="background:#fafafa;">
+<div class="container" style="padding: 32px; color: #333;">
+  <p>Copyright (c) 2018 OpenStack Korea User Group All Rights Reserved.<br>
+      Homepage hosting is supported by <a href="https://d2.naver.com/home"><img alt="Naver D2" style="width: 64px; height: auto;" src="{% static "img/naver-d2.png" %}" /></a>.<br>
+      (Code licensed under MIT, Contents licensed under CC BY-SA 4.0)</p>
 </div>
 </section>
 
