@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-10 01:15+0900\n"
+"POT-Creation-Date: 2018-06-17 16:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: openinfradays/forms.py:21 openinfradays/templates/nav.html:26
+#: openinfradays/forms.py:21 openinfradays/templates/nav.html:27
 #: openinfradays/views.py:60
 msgid "Login"
 msgstr ""
 
-#: openinfradays/settings/settings_dv.py:126
+#: openinfradays/settings/settings_dv.py:128
 msgid "Korean"
 msgstr ""
 
-#: openinfradays/settings/settings_dv.py:127
+#: openinfradays/settings/settings_dv.py:129
 msgid "English"
 msgstr ""
 
@@ -36,7 +36,9 @@ msgid "OpenInfraDays Korea 2018"
 msgstr ""
 
 #: openinfradays/templates/base.html:14 openinfradays/templates/base.html:15
-#: openinfradays/templates/base.html:18
+#: openinfradays/templates/base.html:18 registration/templates/base2.html:11
+#: registration/templates/base2.html:14 registration/templates/base2.html:15
+#: registration/templates/base2.html:18
 msgid "OpenInfra Days Korea 2018"
 msgstr ""
 
@@ -118,11 +120,11 @@ msgstr ""
 msgid "Registration"
 msgstr ""
 
-#: openinfradays/templates/nav.html:24
+#: openinfradays/templates/nav.html:25
 msgid "Profile"
 msgstr ""
 
-#: openinfradays/templates/nav.html:29
+#: openinfradays/templates/nav.html:31
 msgid "Language"
 msgstr ""
 
@@ -163,6 +165,29 @@ msgid "homepage"
 msgstr "Homepage"
 
 #: openinfradays/templates/openinfradays/sponsor_detail.html:24
-#| msgid "Main-Description"
 msgid "sponsor_description"
 msgstr "about"
+
+#: registration/forms.py:61 registration/forms.py:85
+msgid "이름"
+msgstr ""
+
+#: registration/forms.py:62 registration/forms.py:86
+msgid "이메일"
+msgstr ""
+
+#: registration/forms.py:63 registration/forms.py:87
+msgid "직책"
+msgstr ""
+
+#: registration/forms.py:64 registration/forms.py:88
+msgid "소속"
+msgstr ""
+
+#: registration/forms.py:65 registration/forms.py:89
+msgid "휴대폰 번호"
+msgstr ""
+
+#: registration/forms.py:78
+msgid "Submit"
+msgstr ""
