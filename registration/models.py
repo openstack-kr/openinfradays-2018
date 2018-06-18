@@ -7,9 +7,23 @@ class Registration(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     company = models.CharField(max_length=100, blank=True)
+    team = models.CharField(max_length=100, blank=True)
     duty = models.CharField(max_length=100, blank=True)
     phone_number = models.CharField(max_length=20)
+    company_phone_number = models.CharField(max_length=50, blank=True)
     invite_code = models.CharField(max_length=20, null=True)
+    term_agreed = models.BooleanField(default=False, blank=False, null=False)
+    participant_dates = models.CharField(
+        max_length=20,
+        default=None,
+        null=True,
+        blank=True,
+        choices=(
+            ('day1', u'1일차'),
+            ('day2', u'2일차'),
+            ('both', u'양일'),
+        )
+    )
 
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)

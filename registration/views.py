@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render, redirect
 
+from .email import send_email
 from .forms import RegistrationForm, InviteForm, RegistrationCheckForm, RegistrationInfoForm
 from .models import InviteCode, Registration
 
@@ -24,7 +25,11 @@ def register_invite_ticket(request):
     name = form.cleaned_data.get('name')
     duty = form.cleaned_data.get('duty')
     company = form.cleaned_data.get('company')
+    team = form.cleaned_data.get('team')
     phone = form.cleaned_data.get('phone_number')
+    company_phone = form.cleaned_data.get('company_phone_number')
+    term_agreed = form.cleaned_data.get('term_agreed')
+    participant_dates = form.cleaned_data.get('participant_dates')
 
     try:
         code = InviteCode.objects.get(code=invite_code)
@@ -45,12 +50,23 @@ def register_invite_ticket(request):
         company=company,
         duty=duty,
         phone_number=phone,
-        invite_code=invite_code
+        invite_code=invite_code,
+        company_phone_number=company_phone,
+        team=team,
+        term_agreed=term_agreed,
+        participant_dates=participant_dates,
     )
     registration.save()
     code.user = registration
     code.save()
+    d = {'day1': '1일차', 'day2': '2일차', 'both': '양일'}
+    send_email(name, d[participant_dates], email)
     return render(request, 'registered.html')
+
+
+def check2(request):
+    send_email("조성수", "26일, 27일", "nexusz99@gmail.com")
+    return "asdf"
 
 
 def check(request):
@@ -66,7 +82,8 @@ def check(request):
                 'name': registration.name,
                 'duty': registration.duty,
                 'company': registration.company,
-                'phone_number': registration.phone_number
+                'phone_number': registration.phone_number,
+                'participant_dates': registration.participant_dates
             })
             return render(request, 'purchase.html',
                           {'title': '티켓 정보', 'form': form})

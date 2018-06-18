@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -154,7 +154,7 @@ STATIC_ROOT = os.path.join("/var", "www", "openinfradays-2018",
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_TITLE = "OpenInfraDays Korea 2018 Login"
+EMAIL_TITLE = "OpenInfra Days Korea 2018 초청 티켓"
 EMAIL_USE_TLS = True
 EMAIL_HOST = ''
 EMAIL_PORT = 587
