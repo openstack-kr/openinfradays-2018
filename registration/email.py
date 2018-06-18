@@ -39,7 +39,7 @@ def send_email(name, date, email):
     <tr>
         <td style='word-wrap:break-word;font-size:0px;padding:0px' align='left'>
             <div style='color:#000000;font-family:Spoqa Han Sans,sans-serif;font-size:20px;line-height:22px;letter-spacing:-0.8px;text-align:left'>
-                <a href="http://invite.openinfraday.kr">티켓 확인</a>
+                <a href="http://invite.openinfradays.kr">티켓 확인</a>
             </div>
         </td>
     </tr>

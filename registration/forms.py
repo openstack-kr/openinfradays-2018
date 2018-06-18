@@ -11,13 +11,19 @@ class RegistrationCheckForm(forms.Form):
         label='Email',
         required=True
     )
+    invite_code = forms.CharField(
+        label='초청 코드',
+        required=True
+    )
 
     def clean(self):
         cleaned_data = super(RegistrationCheckForm, self).clean()
         try:
-            Registration.objects.get(email=cleaned_data.get('email'))
+            reg = Registration.objects.get(email=cleaned_data.get('email'))
+            if reg.invite_code != cleaned_data.get('invite_code'):
+                raise forms.ValidationError('등록되지 않은 정보입니다.')
         except Exception as e:
-            raise forms.ValidationError('등록되지 않은 이메일입니다.')
+            raise forms.ValidationError('등록되지 않은 정보입니다.')
         return cleaned_data
 
 

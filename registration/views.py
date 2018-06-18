@@ -64,11 +64,6 @@ def register_invite_ticket(request):
     return render(request, 'registered.html')
 
 
-def check2(request):
-    send_email("조성수", "26일, 27일", "nexusz99@gmail.com")
-    return "asdf"
-
-
 def check(request):
     form = RegistrationCheckForm()
     if request.method == "POST":
@@ -81,6 +76,7 @@ def check(request):
                 'email': registration.email,
                 'name': registration.name,
                 'duty': registration.duty,
+                'team': registration.team,
                 'company': registration.company,
                 'phone_number': registration.phone_number,
                 'participant_dates': registration.participant_dates
