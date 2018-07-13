@@ -19,9 +19,7 @@ class Registration(models.Model):
         null=True,
         blank=True,
         choices=(
-            ('day1', u'1일차'),
-            ('day2', u'2일차'),
-            ('both', u'양일'),
+            ('birthday', u'오픈스택생일파티'),
         )
     )
 
