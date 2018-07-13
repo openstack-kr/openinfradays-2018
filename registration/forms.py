@@ -68,7 +68,7 @@ class RegistrationInfoForm(forms.ModelForm):
         fields = ('term_agreed', 'invite_code', 'email', 'name', 'company', 'team', 'duty', 'company_phone_number',
                   'phone_number', 'participant_dates',)
         labels = {
-            'invite_code': _('초청 코드 (본 초청코드로는 2일차에 진행 예정인 핸즈온랩 세션은 참석이 불가합니다. 참석을 원하시는 경우 jwon.ku@gmail.com 로 문의 주시기 바랍니다.)'),
+            'invite_code': _('초청 코드'),
             'name': _('이름'),
             'email': _('이메일'),
             'duty': _('직책'),
@@ -92,7 +92,7 @@ class RegistrationForm(forms.ModelForm):
         self.fields['duty'].required = True
         self.fields['phone_number'].required = True
         self.fields['company_phone_number'].required = False
-        self.fields['participant_dates'].required = True
+        self.fields['participant_dates'].required = False
         self.helper = FormHelper()
         self.helper.form_id = 'registration-form'
         self.helper.form_action = '/registration/process'
@@ -106,7 +106,7 @@ class RegistrationForm(forms.ModelForm):
                   'phone_number', 'participant_dates',)
         labels = {
             'invite_code': _(
-                '초청 코드 (본 초청코드로는 2일차에 진행 예정인 핸즈온랩 세션은 참석이 불가합니다. 참석을 원하시는 경우 jwon.ku@gmail.com 로 문의 주시기 바랍니다.)'),
+                '초청 코드'),
             'name': _('이름'),
             'email': _('이메일'),
             'duty': _('직책'),
