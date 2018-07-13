@@ -123,9 +123,9 @@ class RegistrationForm(forms.ModelForm):
         email = cleaned_data.get('email')
         dup = None
         try:
-            dup = Registration.objects.get(email=email)
+            dup = Registration.objects.get(invite_code=invite_code)
         except Exception:
             pass
         if dup:
-            raise forms.ValidationError('이미 등록된 이메일입니다.')
+            raise forms.ValidationError('이미 등록된 초청코드입니다.')
         return cleaned_data
