@@ -59,7 +59,7 @@ def register_invite_ticket(request):
     registration.save()
     code.user = registration
     code.save()
-    d = {'day1': '1일차', 'day2': '2일차', 'both': '양일'}
+    d = {'day1': '1일차', 'day2': '2일차', 'both': '양일', 'birthday': '오픈스택생일파티'}
     send_email(name, d[participant_dates], email)
     return render(request, 'registered.html')
 
